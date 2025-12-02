@@ -1,0 +1,13 @@
+<div class="button_container">
+<button (click)="getuserData()" class="button_style">Load Data</button>
+<button (click)="removeData()" class="removeData_button">Remove Data</button>
+</div>
+
+<div *ngFor="let item of userData" class="contaimer">
+  <h2>ID:{{item.id}}</h2>
+  <h1 class="title">{{item.title}}</h1>
+  <p>{{item.body}}</p>
+</div>
+ 
+
+<router-outlet></router-outlet> 
