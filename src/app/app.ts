@@ -19,11 +19,7 @@ export class App {
 
   async getuserData() {
     const response = await axios.get(this.apiurl);
-    console.log(response.data);
     this.userData =response.data;
-
-    console.log(this.userData.length+1)
-    
   }
   
 
@@ -31,7 +27,7 @@ export class App {
     this.getuserData();
 }
 removeData(){
-this.userData.splice(0,this.userData.length-this.userData.length+1);
+this.userData.splice(0,this.userData.length - this.userData.length+1);
 }
 
 }
